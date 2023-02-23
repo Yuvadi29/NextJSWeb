@@ -23,7 +23,7 @@ const Header = () => {
         <div>
             <Link 
             href='/ndaysnalgo'
-            className='px-5 y-3 text-sm md:text-base bg-gray-900 text-[#fff] flex items-center rounded-full text-center'
+            className='px-5 py-3 text-sm md:text-base bg-gray-900 text-[#fff] flex items-center rounded-full text-center'
             >
                 Get Started with Your #NDaysNAlgorithms Now!!
             </Link>
