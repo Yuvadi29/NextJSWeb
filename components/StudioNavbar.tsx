@@ -7,15 +7,15 @@ const StudioNavbar = (props: any) => {
         <div>
             <div className='flex items-center justify-between p-5
         '>
-                <Link href="/" className='text-[#F7AB8A] flex items-center'>
-                    <ArrowUturnLeftIcon className='h-6 v-6 text-[#F7AB8A]' mr-2 />
+                <Link href="/" className='text-[#151725] flex items-center'>
+                    <ArrowUturnLeftIcon className='h-6 v-6 text-[#151725]' mr-2 />
                     Go to Website</Link>
 
-                <div className="hidden md:flex p-5 rounded-lg justify-center border-2 border-[#F7AB8A]">
+                <div className="hidden md:flex p-5 rounded-lg justify-center border-2 border-[#151725]">
                     <h1 className="font-bold text-white">Start your NDaysNAlgorithms Journey Now!!</h1>
                     <Link
                         href="www.youtube.com/@coding_adda"
-                        className='text-[#F7AB8A]'
+                        className='text-[#151725]'
                     >
                         Youtube Link
                     </Link>
