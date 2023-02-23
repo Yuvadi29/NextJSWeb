@@ -7,6 +7,8 @@ export default function RootLayout({
 }) {
   return (
     <html>
+      {/* Header */}
+      {/* Banner */}
       <head />
       <body>{children}</body>
     </html>
