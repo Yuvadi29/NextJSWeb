@@ -26,3 +26,4 @@ npm install next-sanity @portabletext/react @sanity/image-url```
     "styled-components": "^5.2.0"
  for main package.json file and for devDependencies
 ```
+##Theme.ts contains the color theme for sanity customisation for the blog page
