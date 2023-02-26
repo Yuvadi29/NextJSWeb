@@ -7,8 +7,8 @@ import StudioNavbar from "./components/StudioNavbar";
 import codingAddabrand from "./components/Logo";
 import { getDefaultDocumentNode } from "./structure";
 
-const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
-const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET;
+const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '2ki5nvnp';
+const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production';
 
 export default defineConfig({
   // BasePath tells me exactly where i am going to render it on the website
@@ -17,6 +17,7 @@ export default defineConfig({
   title: "CodingAdda_Blog_Studio",
   projectId,
   dataset,
+
   plugins: [deskTool({
     defaultDocumentNode: getDefaultDocumentNode
   }), visionTool()],

@@ -15,7 +15,7 @@ const query = groq`
 `
 
 // Revalidate the page every 30 seconds
-export const revalidate = 30; 
+export const revalidate = 30;
 
 const HomePage = async () => {
   if (previewData()) {
@@ -29,7 +29,7 @@ const HomePage = async () => {
           </div>
         }
       >
-        <PreviewBlogList query={query}/>
+        <PreviewBlogList query={query} />
       </PreviewSuspense>
     </div>
   }
@@ -37,7 +37,7 @@ const HomePage = async () => {
   const posts = await client.fetch(query);
   return (
     <div>
-      <BlogList posts = {posts}/>
+      <BlogList posts={posts} />
       {/* <h1>Not in Preview Mode</h1> */}
     </div>
   )
