@@ -14,6 +14,9 @@ const query = groq`
 } | order(_createdAt desc)
 `
 
+// Revalidate the page every 30 seconds
+export const revalidate = 30; 
+
 const HomePage = async () => {
   if (previewData()) {
     return <div>

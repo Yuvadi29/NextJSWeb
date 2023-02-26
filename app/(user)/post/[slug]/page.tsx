@@ -11,6 +11,24 @@ type Props = {
     };
 };
 
+// Revalidate the page every 30 seconds
+export const revalidate = 30; 
+
+export async function generateStaticParams() {
+    const query = groq`*[_type == 'post']
+    {
+        slug
+    }`;
+
+    const slugs: Post[] = await client.fetch(query);
+    const slugRoute = slugs.map((slug) => slug.slug.current);
+
+    return slugRoute.map((slug) => ({
+        slug,
+    }));
+}
+
+
 async function Post({ params: { slug } }: Props) {
     const query = groq`
     *[_type == 'post' && slug.current == $slug][0]
@@ -72,8 +90,8 @@ async function Post({ params: { slug } }: Props) {
                             <div className="flex items-center justify-end mt-auto space-x-2">
                                 {post.categories.map((category) => (
                                     <p
-                                    key={category._id}
-                                    className="bg-gray-800 text-white px3 py-1 rounded-full text-sm font semibold mt-4"
+                                        key={category._id}
+                                        className="bg-gray-800 text-white px3 py-1 rounded-full text-sm font semibold mt-4"
                                     >
                                         {category.title}
                                     </p>
