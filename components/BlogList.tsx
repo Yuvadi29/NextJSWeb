@@ -50,7 +50,8 @@ function BlogList({ posts }: Props) {
 
                         <div className="mt-5 flex-1">
                             <p className="underline text-lg font-bold">{post.title}</p>
-                            <p className="text-gray-500">{post.description}</p>
+                            {/* Here the line-clamp-2 means that it will display only 2 lines of the description mentioned for the code */}
+                            <p className=" line-clamp-2 text-gray-500">{post.description}</p>
                         </div>
                     </div>
                 ))}
