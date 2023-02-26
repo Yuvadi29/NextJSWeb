@@ -5,4 +5,7 @@ module.exports = {
     appDir: true,
     preview: true,
   },
+  images: {
+    domains: ["images.unsplash.com", "cdn.sanity.io"],
+  }
 }
