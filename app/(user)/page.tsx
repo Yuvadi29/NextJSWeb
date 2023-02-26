@@ -1,7 +1,9 @@
 import { previewData } from "next/headers";
 import { groq } from "next-sanity";
 import { client } from "../../lib/sanity.client";
-import { PreviewSuspense } from "next-sanity/preview";
+import PreviewBlogList from "../../components/PreviewBlogList";
+import PreviewSuspense from "../../components/PreviewSuspense";
+import BlogList from "../../components/BlogList";
 
 // This will fetch all the blog posts created till date
 const query = groq`
@@ -31,7 +33,10 @@ const HomePage = async () => {
 
   const posts = await client.fetch(query);
   return (
-    <div>Not in Preview Mode</div>
+    <div>
+      <BlogList posts = {posts}/>
+      {/* <h1>Not in Preview Mode</h1> */}
+    </div>
   )
 }
 export default HomePage;
